@@ -24,7 +24,6 @@ class BCS:
                         'SN': row[3]
                     }
                     router_LA.append(result)
-                    # print(hostnames)
         router_LA_df = pd.DataFrame(data=router_LA)
         print(router_LA_df)
         print(f'Total Router LA: {len(router_LA)}')
@@ -48,7 +47,6 @@ class BCS:
                         'SN': row[3]
                     }
                     router_TLK.append(result)
-                    # print(hostnames)
         router_TLK_df = pd.DataFrame(data=router_TLK)
         print(router_TLK_df)
         print(f'Total Router Telkom: {len(router_TLK)}')   
@@ -72,7 +70,6 @@ class BCS:
                         'SN': row[3]
                     }
                     router_PINS.append(result)
-                    # print(hostnames)
         router_PINS_df = pd.DataFrame(data=router_PINS)
         print(router_PINS_df)
         print(f'Total Router PINS: {len(router_PINS)}')
@@ -97,46 +94,6 @@ class BCS:
                         'SN': row[3]
                     }
                     upgraded_router.append(result)
-                    # print(hostnames)
         upgraded_router_df = pd.DataFrame(data=upgraded_router)
         print(upgraded_router_df)
         print(f'Total of Upgraded Router: {len(upgraded_router)}')
-
-
-
-
-
-# df = pd.read_csv('input/vEdge-02-10-2026.csv')
-# df = df.get(['Hostname', 'Version', 'Reachability', 'Subject SUDI serial #'])
-# print(df)
-# print('\n')
-# router_LA = []
-# dc_drc_LA_pattern = "(^DC|DRC).*(LA|LA\\d+)$"
-
-# router_TLK = []
-# dc_drc_TLK_pattern = "(^DC|DRC).*(TLK|TLK\\d+)$"
-
-# router_PINS = []
-# dc_drc_PINS_pattern = "(^DC|DRC).*(PINS|PINS\\d+)$"
-
-# version_pattern = "17\\.12.*"
-
-# for row in df.itertuples(index=False):
-#     hostnames = row[0]
-#     version = row[1]
-#     status = row[2]
-#     if isinstance(hostnames, float) == False and re.match(version_pattern, str(version), flags=0) and status == 'reachable':
-#         match = re.match(dc_drc_LA_pattern, hostnames, flags=0)
-#         if match:
-#             result = {
-#                 'hostname': row[0],
-#                 'version': row[1],
-#                 'SN': row[3]
-#             }
-#             router_LA.append(result)
-#             # print(hostnames)
-
-# print(f'Total Router LA: {len(router_LA)}')
-# router_LA_df = pd.DataFrame(data=router_LA)
-# print(router_LA_df)
-# router_LA_df.to_csv(path_or_buf='output/3.csv',index=False, mode='x')
