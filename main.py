@@ -35,16 +35,3 @@ print(f'Total Router LA: {len(router_LA)}')
 router_LA_df = pd.DataFrame(data=router_LA)
 print(router_LA_df)
 router_LA_df.to_csv(path_or_buf='output/3.csv',index=False, mode='x')
-
-
-
-
-# txt = ['DC-BCCB-SD-LA', 'DRC-BCCB-SD-TLK', 'DC-BCCB-SD-PINS-LA2235453', 'DC2EXTEDG-1', 'DRC2-BCCB-SD-LA', 'DC2-BCCB-SD-LA']
-# pattern = "(^DC|DRC).*(LA|LA\\d+)$"
-
-# for _ in txt:
-#     test = re.match(pattern, _, flags=0)
-#     if test:
-#         print(test)
-#         print(_)
-#         print('\n')
